@@ -1,0 +1,58 @@
+<html>
+ <head>
+  <title>Multi-Document Summarizer</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <link rel="stylesheet" type="text/css" href="jscss.css" />
+  <script>
+		function load() {
+			var y=document.getElementById("main");
+			y.style.visibility = "visible";
+			
+			var x=document.getElementById("load_div");
+			x.style.backgroundImage = "url('loading1.gif')";
+		}
+		
+		window.onload = function() {
+			var y=document.getElementById("main");
+			y.style.visibility = "hidden";
+		}
+  </script>
+  
+ </head>
+ <body>
+	
+		<div id = "name">
+			<div class = "top"> SEAD </div>
+			<div class = "sub">Extractive Document Summarizer For Articles </div> 
+		</div>
+		
+		
+
+		<div id = "content">
+			<div class = "bar">
+				<form method="POST" action="bing_basic.php">
+					<br />
+					<label class = "noBorder" for="query">Search Query</label>
+					<input name="query" type="text" size="60" maxlength="60" value=""/><br />
+					<input name="service_op" type="radio" value="Web"  /> Web
+					<input name="service_op" type="radio" value="News" checked  /> News
+					<br/>
+					<br />
+					<br />
+					<input name="bt_search" type="submit" value="Search" onclick="load()"> </input>
+					
+				</form>
+				
+			</div>
+					
+		</div>
+		<div id="main">
+					<div class="loader">
+					  <div class="inner one"></div>
+					  <div class="inner two"></div>
+					  <div class="inner three"></div>
+					</div>
+		</div>
+	
+ </body>
+</html>
